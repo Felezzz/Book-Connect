@@ -1,4 +1,4 @@
-# CIA DO LIVRO - Aplicativo Mobile
+# Book Connect- Aplicativo Mobile
 
 Aplicativo mobile de livraria desenvolvido com HTML, CSS e JavaScript.
 
