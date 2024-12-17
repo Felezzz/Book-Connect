@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BookConnect</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar livros...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="active"><i class="fas fa-home"></i></a>
+            <a href="#biblioteca"><i class="fas fa-book"></i></a>
+            <a href="#avaliacoes"><i class="fas fa-star"></i></a>
+            <a href="#perfil"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="section active">
+            <h2>Destaques</h2>
+            <div class="book-grid" id="featured-books">
+                <!-- Livros serão inseridos via JavaScript -->
+            </div>
+        </section>
+
+        <section id="biblioteca" class="section">
+            <h2>Biblioteca</h2>
+            <div class="categories">
+                <button class="category-btn active">Todos</button>
+                <button class="category-btn">Ficção</button>
+                <button class="category-btn">Não-Ficção</button>
+                <button class="category-btn">Romance</button>
+                <button class="category-btn">Fantasia</button>
+            </div>
+            <div class="book-grid" id="library-books">
+                <!-- Livros serão inseridos via JavaScript -->
+            </div>
+        </section>
+
+        <section id="avaliacoes" class="section">
+            <h2>Minhas Avaliações</h2>
+            <div class="reviews-container">
+                <!-- Avaliações serão inseridas via JavaScript -->
+            </div>
+        </section>
+
+        <section id="perfil" class="section">
+            <h2>Meu Perfil</h2>
+            <div class="profile-info">
+                <div class="profile-header">
+                    <div class="profile-image-container">
+                        <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="profile-image">
+                        <button class="edit-profile-photo">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                    </div>
+                    <div class="profile-name">
+                        <h3>Usuário</h3>
+                        <p class="member-since">Membro desde Dezembro 2023</p>
+                    </div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-book-reader"></i>
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Livros Lidos</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Avaliações</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-list"></i>
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Listas</span>
+                    </div>
+                </div>
+
+                <div class="profile-sections">
+                    <div class="profile-section">
+                        <h4>Lendo Atualmente</h4>
+                        <div class="current-books">
+                            <p class="empty-state">Nenhum livro em leitura</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h4>Últimas Avaliações</h4>
+                        <div class="recent-reviews">
+                            <p class="empty-state">Nenhuma avaliação recente</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h4>Minhas Listas</h4>
+                        <div class="reading-lists">
+                            <p class="empty-state">Nenhuma lista criada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="book-details">
+                <div class="book-header">
+                    <img src="" alt="" class="modal-book-cover">
+                    <div class="book-info">
+                        <h2 class="modal-book-title"></h2>
+                        <p class="modal-book-author"></p>
+                        <div class="modal-book-rating"></div>
+                        <p class="modal-book-category"></p>
+                    </div>
+                </div>
+                <div class="book-reviews">
+                    <h3>Avaliações</h3>
+                    <div class="reviews-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
